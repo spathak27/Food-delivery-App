@@ -1,0 +1,29 @@
+{
+  "extends": [
+    "development"
+  ],
+  "hints": {
+    "compat-api/html": [
+      "default",
+      {
+        "ignore": [
+          "script[type=module]"
+        ]
+      }
+    ],
+    "highest-available-document-mode": "off",
+    "compat-api/css": [
+      "default",
+      {
+        "ignore": [
+          "text-align: center"
+        ]
+      }
+    ]
+  },
+  "browserslist": [
+    "defaults",
+    "not ie 11",
+    "not ie <= 10"
+  ]
+}
