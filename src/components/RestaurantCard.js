@@ -33,7 +33,4 @@ const RestaurantCard = (props) => {
   );
 };
 
-// Higher order component (promoted label on restaurants)
-// learn this part later
-
 export default RestaurantCard;

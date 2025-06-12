@@ -14,9 +14,7 @@ const Body = () => {
   }, []);
 
   const fetchData = async () => {
-    const data = await fetch(
-      "https://www.swiggy.com/dapi/restaurants/list/v5?lat=27.1766701&lng=78.00807449999999&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTIN"
-    );
+    const data = await fetch("http://localhost:5000/api/swiggy");
 
     const json = await data.json();
 
@@ -38,7 +36,7 @@ const Body = () => {
     );
 
   // conditional rendering- rendering based on a condition
-  return listOfRestaurants.length === 0 ? (
+  return !listOfRestaurants || listOfRestaurants.length === 0 ? (
     <Shimmer />
   ) : (
     <div className="body">
